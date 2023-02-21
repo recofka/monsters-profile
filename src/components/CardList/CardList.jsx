@@ -1,15 +1,19 @@
 import React from 'react';
-import Card from '../Card/Card';
+import CardUI from '../Card/Card';
+import { Box, Grid } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
-import './CardList.css';
 
 const CardList = ({ monstersList }) => {
   return (
-    <div className='card-list-wrapper'>
+    <Grid templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }} gap={4}>
       {monstersList.map((monster) => {
-        return <Card key={monster.id} monster={monster} />;
+        return (
+          <Box key={monster.id}>
+            <CardUI monster={monster} />
+          </Box>
+        );
       })}
-    </div>
+    </Grid>
   );
 };
 
