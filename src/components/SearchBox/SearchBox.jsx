@@ -1,8 +1,10 @@
 import React from 'react';
-import { Box, Input } from '@chakra-ui/react';
+import { Box, Input, useColorModeValue } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
 const SearchBox = ({ onChange, placeholder }) => {
+  let boxBorder = useColorModeValue('gray.50', 'primary400');
+
   return (
     <Box>
       <Input
@@ -11,8 +13,10 @@ const SearchBox = ({ onChange, placeholder }) => {
         placeholder={placeholder}
         size='lg'
         width='auto'
-        _placeholder={{ opacity: 1, color: 'gray.500' }}
-        variant='outline'
+        _placeholder={{ opacity: 1, color: 'primary400' }}
+        border='2px solid'
+        variant='solid'
+        borderColor={boxBorder}
       />
     </Box>
   );

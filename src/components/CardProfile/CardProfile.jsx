@@ -4,17 +4,19 @@ import { Flex, Image, Text, useColorModeValue, Stack, Button } from '@chakra-ui/
 const CardProfile = ({ monster }) => {
   const { id, name, email } = monster;
 
-  let boxBg = useColorModeValue('#ADC5CF !important', '#2989A6 !important');
-  let imageBorder = useColorModeValue('#845EC2 !important', '#F3C5FF !important');
-
-  let mainText = useColorModeValue('gray.800', 'white');
-  let secondaryText = useColorModeValue('gray.800', 'gray.400');
+  let boxBg = useColorModeValue('verylightcyan', 'primary300');
+  let boxBorder = useColorModeValue('gray.800', 'primary400');
+  let imageBorder = useColorModeValue('lightviolet', 'primary200');
+  let mainText = useColorModeValue('gray.800', 'primary800');
+  let secondaryText = useColorModeValue('gray.800', 'primary600');
 
   return (
     <Flex
       borderRadius='20px'
       bg={boxBg}
+      border='3px solid'
       p='20px'
+      borderColor={boxBorder}
       h='330px'
       w={{ base: '350px', md: '300px' }}
       alignItems='center'
@@ -23,7 +25,7 @@ const CardProfile = ({ monster }) => {
       <Flex flexDirection='column' mb='10px'>
         <Image
           src={`https://robohash.org/${id}?set=set2&size=200x200`}
-          border='5px solid red'
+          border='5px solid'
           mx='auto'
           borderColor={imageBorder}
           width='150px'
@@ -38,7 +40,7 @@ const CardProfile = ({ monster }) => {
         </Text>
       </Flex>
 
-      <Stack mt={8} direction={'row'} spacing={4}>
+      {/* <Stack mt={8} direction={'row'} spacing={4}>
         <Button
           flex={1}
           fontSize={'sm'}
@@ -67,7 +69,7 @@ const CardProfile = ({ monster }) => {
         >
           Follow
         </Button>
-      </Stack>
+      </Stack> */}
     </Flex>
   );
 };
