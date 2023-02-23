@@ -1,4 +1,7 @@
+import { Box, ChakraProvider, Grid, Heading, VStack } from '@chakra-ui/react';
+import theme from './theme/theme';
 import React, { useEffect, useState } from 'react';
+import ColorModeSwitcher from './components/ColorModeSwitcher/ColorModeSwitcher';
 import SearchBox from './components/SearchBox/SearchBox';
 import CardList from './components/CardList/CardList';
 import './App.css';
@@ -27,12 +30,20 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h1 className='page-title'>Monsters Profile</h1>
-      <SearchBox onChange={onChangeHandler} placeholder='search for a monster here' />
-
-      <CardList monstersList={filteredMonsters} />
-    </div>
+    <ChakraProvider theme={theme} resetCss={false}>
+      <Box textAlign='center'>
+        <Grid minH='100vh' p={3}>
+          <ColorModeSwitcher justifySelf='flex-end' />
+          <VStack spacing={8}>
+            <Heading as='h1' className='page-title' fontSize='xl'>
+              Monsters Profile
+            </Heading>
+            <SearchBox onChange={onChangeHandler} placeholder='search for a monster' />
+            <CardList monstersList={filteredMonsters} />
+          </VStack>
+        </Grid>
+      </Box>
+    </ChakraProvider>
   );
 };
 

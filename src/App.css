@@ -1,17 +1,19 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(to left, rgba(7, 27, 82, 1) 0%, rgba(0, 128, 128, 1) 100%);
-  text-align: center;
+:root {
+
+  --x-offset: -0.0225em;
+  --y-offset: 0.025em;
+  --stroke: 0.025em;
+  --background-color: white;
+  --stroke-color: #FFC857;
+  --text-shadow: var(--x-offset) var(--y-offset) 0px var(--background-color),
+    calc(var(--x-offset) - var(--stroke)) calc(var(--y-offset) + var(--stroke)) 0px var(--stroke-color);
 }
 
-.page-title {
-  font-size: 4.375rem;
-  color: #0ccac4;
-  font-family: 'Bigelow Rules';
-  margin: 2rem;
+
+h1.page-title {
+  font-family: 'Kanit', sans-serif;
+  font-size: calc(1em + 10vmin);
+  font-weight: 900;
+  color: #119DA4;
+  text-shadow: var(--text-shadow)
 }

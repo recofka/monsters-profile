@@ -1,9 +1,9 @@
 import React from 'react';
-import Card from '../Card/Card';
+import CardProfile from './CardProfile';
 
 export default {
   title: 'Components/Card',
-  component: Card,
+  component: CardProfile,
   args: {
     key: 10,
     monster: {
@@ -14,6 +14,6 @@ export default {
   }
 };
 
-const Template = (args) => <Card {...args} />;
+const Template = (args) => <CardProfile {...args} />;
 
 export const CardDisplay = Template.bind({});

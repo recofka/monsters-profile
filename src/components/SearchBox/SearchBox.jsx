@@ -1,10 +1,24 @@
 import React from 'react';
+import { Box, Input, useColorModeValue } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
-import './SearchBox.css';
 
 const SearchBox = ({ onChange, placeholder }) => {
+  let boxBorder = useColorModeValue('gray.50', 'primary400');
+
   return (
-    <input className='search-box' type='search' onChange={onChange} placeholder={placeholder} />
+    <Box>
+      <Input
+        type='search'
+        onChange={onChange}
+        placeholder={placeholder}
+        size='lg'
+        width='auto'
+        _placeholder={{ opacity: 1, color: 'primary400' }}
+        border='2px solid'
+        variant='solid'
+        borderColor={boxBorder}
+      />
+    </Box>
   );
 };
 
