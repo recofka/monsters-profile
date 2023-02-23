@@ -1,5 +1,5 @@
 import React from 'react';
-import CardUI from '../Card/Card';
+import CardProfile from '../CardProfile/CardProfile';
 import { Box, Grid } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
@@ -9,7 +9,7 @@ const CardList = ({ monstersList }) => {
       {monstersList.map((monster) => {
         return (
           <Box key={monster.id}>
-            <CardUI monster={monster} />
+            <CardProfile monster={monster} />
           </Box>
         );
       })}

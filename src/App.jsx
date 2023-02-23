@@ -1,4 +1,5 @@
-import { Box, ChakraProvider, Grid, Heading, theme, VStack } from '@chakra-ui/react';
+import { Box, ChakraProvider, Grid, Heading, VStack } from '@chakra-ui/react';
+import theme from './theme/theme';
 import React, { useEffect, useState } from 'react';
 import ColorModeSwitcher from './components/ColorModeSwitcher/ColorModeSwitcher';
 import SearchBox from './components/SearchBox/SearchBox';
@@ -29,7 +30,7 @@ const App = () => {
   };
 
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme} resetCss={false}>
       <Box textAlign='center'>
         <Grid minH='100vh' p={3}>
           <ColorModeSwitcher justifySelf='flex-end' />
@@ -38,7 +39,6 @@ const App = () => {
               Monsters Profile
             </Heading>
             <SearchBox onChange={onChangeHandler} placeholder='search for a monster' />
-
             <CardList monstersList={filteredMonsters} />
           </VStack>
         </Grid>

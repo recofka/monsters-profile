@@ -1,19 +1,22 @@
-export default {
+import { extendTheme } from '@chakra-ui/react';
+import { mode } from '@chakra-ui/theme-tools';
+
+const Theme = extendTheme({
   styles: {
-    global: {
-      body: {}
-    }
+    global: (props) => ({
+      body: {
+        // fontFamily: 'body',
+        // color: mode('gray.800', 'whiteAlpha.900')(props),
+        bg: mode('gray.100', 'gray.800')(props)
+      }
+    })
   },
   colors: {
-    darkBlue: '#1f2041ff',
-    violet: '#4b3f72ff',
-    yellow: '#ffc857ff',
-    orage: '#f48d3b',
-    darkCyan: '#119da4ff',
-    grayPaynes: '#19647eff'
-  },
-  fonts: {
-    body: 'Kanit, sans-serif',
-    heading: 'Julee, cursive'
+    brand: {
+      primary: '#00DDFF',
+      greyPrimary: '#38383d',
+      greySecondary: '#42414d'
+    }
   }
-};
+});
+export default Theme;
