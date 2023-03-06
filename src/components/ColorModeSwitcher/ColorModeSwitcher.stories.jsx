@@ -9,4 +9,4 @@ export default {
 
 const Template = (args) => <ColorModeSwitcher {...args} />;
 
-export const CardDisplay = Template.bind({});
+export const ColorModeSwitcherDisplay = Template.bind({});
