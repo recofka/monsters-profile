@@ -1,33 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Flex, Image, Text, useColorModeValue, Stack, Button } from '@chakra-ui/react';
 
 const CardProfile = ({ monster }) => {
   const { id, name, email } = monster;
-
-  let boxBg = useColorModeValue('verylightcyan', 'primary300');
-  let boxBorder = useColorModeValue('gray.800', 'primary400');
-  let imageBorder = useColorModeValue('lightviolet', 'primary200');
+  const [isHovering, setHovering] = useState('');
+  let cardBg = useColorModeValue('lightcyan', 'primary300');
+  let cardBorder = useColorModeValue('gray.800', 'primary400');
+  let contrastColor = useColorModeValue('lightviolet', 'primary100');
   let mainText = useColorModeValue('gray.800', 'primary800');
   let secondaryText = useColorModeValue('gray.800', 'primary600');
 
+  const handleMouseEnter = () => {
+    setHovering(true);
+  };
+  const handleMouseLeave = () => {
+    setHovering(false);
+  };
+
   return (
     <Flex
+      style={{
+        position: 'relative',
+        top: isHovering ? '-10px' : '0px',
+        transition: 'top ease 0.5s'
+      }}
       borderRadius='20px'
-      bg={boxBg}
+      bg={cardBg}
       border='3px solid'
       p='20px'
-      borderColor={boxBorder}
+      borderColor={cardBorder}
       h='330px'
       w={{ base: '350px', md: '300px' }}
       alignItems='center'
       direction='column'
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      <Flex flexDirection='column' mb='10px'>
+      <Flex flexDirection='column' mb='10px' minWidth='md'>
         <Image
           src={`https://robohash.org/${id}?set=set2&size=200x200`}
           border='5px solid'
           mx='auto'
-          borderColor={imageBorder}
+          borderColor={contrastColor}
           width='150px'
           height='150px'
           borderRadius='50%'
@@ -40,36 +54,36 @@ const CardProfile = ({ monster }) => {
         </Text>
       </Flex>
 
-      {/* <Stack mt={8} direction={'row'} spacing={4}>
+      <Stack mt={8} direction={'row'} spacing={4}>
         <Button
+          variant={'solid'}
           flex={1}
           fontSize={'sm'}
-          rounded={'full'}
+          _hover={{
+            bg: 'primary600'
+          }}
           _focus={{
-            bg: 'gray.200'
+            bg: 'primary500'
           }}
         >
           Message
         </Button>
         <Button
+          variant={'solid'}
           flex={1}
           fontSize={'sm'}
-          rounded={'full'}
-          bg={'blue.400'}
+          bg={contrastColor}
           color={'white'}
-          boxShadow={
-            '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
-          }
           _hover={{
-            bg: 'blue.500'
+            bg: 'primary500'
           }}
           _focus={{
-            bg: 'blue.500'
+            bg: 'primary500'
           }}
         >
           Follow
         </Button>
-      </Stack> */}
+      </Stack>
     </Flex>
   );
 };

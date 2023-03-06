@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+<h1 align="center">
+  <img alt="monsters-profile" title="#repo-image" src="/public/monsters-profile.png" width="450px" />
+</h1>
+ <p align="center">Monster profile to showcase options of your choice</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<p align="center">
 
-In the project directory, you can run:
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/recofka/monsters-profile?style=flat-square">
 
-### `npm start`
+  <img alt="Repository issues" src="https://img.shields.io/github/languages/top/recofka/monsters-profile?style=flat-square">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/recofka/monsters-profile?style=flat-square">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  <a href="https://github.com/recofka/monsters-profile/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/recofka/monsters-profile?style=flat-square">
+  </a>
+  
+  <a href="https://monsters-profile-one.vercel.app">
+    <img alt="Deployment" src="https://img.shields.io/github/deployments/recofka/monsters-profile/production?label=Vercel">
+  </a>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="center">
+  <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#frontend">Frontend</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#goals">Goals</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#installation">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+</p>
 
-### `npm run eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+##  Technologies
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This project was developed with the following technologies:
 
-## Learn More
+- [React.js](https://reactjs.org)
+- [Jest](https://jestjs.io/)
+- [Storybook](https://storybook.js.org/)
+- [Chakra-ui](https://chakra-ui.com/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+##  Project
 
-### Code Splitting
+This is a side project using React which has the purpose to study and to use of Storybook + the component library Chakra-ui.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+##  Frontend
+<h1 align="center">
+  <img alt="monsters-profile" title="#app-image"  src="/public/monsters-profile.png" />
+</h1>
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+##  Goals
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<p>Goals</p>
 
-### Deployment
+Learn the basics of Storybook and Chakra UI.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+##  Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+# Clone this repository
+$ git clone git@github.com:recofka/monsters-profile
+
+# Install all dependencies running:
+$ yarn install
+
+# Start the project with the command:
+$ yarn start
+
+# PS: This project uses an external API(jsonplaceholder.typicode.com/users), make sure that the API is running for a good functioning of this application
+
+```

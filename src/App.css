@@ -1,5 +1,6 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Rubik:wght@400;700&display=swap');
 
+:root {  
   --x-offset: -0.0225em;
   --y-offset: 0.025em;
   --stroke: 0.025em;
@@ -11,7 +12,6 @@
 
 
 h1.page-title {
-  font-family: 'Kanit', sans-serif;
   font-size: calc(1em + 10vmin);
   font-weight: 900;
   color: #119DA4;
