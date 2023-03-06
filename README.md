@@ -1,7 +1,6 @@
-<h1 align="center">
-  <img alt="monsters-profile" title="#repo-image" src="/public/monsters-profile.png" width="450px" />
-</h1>
- <p align="center">Monster profile to showcase options of your choice</p>
+<h1 align="center">Monsters Profile</h1>
+
+ <p align="center">Monster profile is a site to showcase monster to choose. </p>
 
 
 <p align="center">
@@ -51,11 +50,12 @@ This project was developed with the following technologies:
 
 ##  Project
 
-This is a side project using React which has the purpose to study and to use of Storybook + the component library Chakra-ui.
+This is a side project using React which has the purpose to study and to use of Storybook + Chakra-ui.
 
 
 
 ##  Frontend
+[Click here and check out the result](https://monsters-profile-one.vercel.app/).
 <h1 align="center">
   <img alt="monsters-profile" title="#app-image"  src="/public/monsters-profile.png" />
 </h1>
@@ -64,9 +64,7 @@ This is a side project using React which has the purpose to study and to use of 
 
 ##  Goals
 
-<p>Goals</p>
-
-Learn the basics of Storybook and Chakra UI.
+<p>The main goal of this small project is learn the basic concept of Storybook and Chakra UI.</p>
 
 
 ##  Installation
