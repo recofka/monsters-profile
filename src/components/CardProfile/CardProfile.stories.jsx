@@ -2,7 +2,7 @@ import React from 'react';
 import CardProfile from './CardProfile';
 
 export default {
-  title: 'Components/Card',
+  title: 'Components/CardProfile',
   component: CardProfile,
   args: {
     key: 10,
@@ -16,4 +16,4 @@ export default {
 
 const Template = (args) => <CardProfile {...args} />;
 
-export const CardDisplay = Template.bind({});
+export const Default = Template.bind({});

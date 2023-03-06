@@ -6,7 +6,7 @@ export default {
   component: SearchBox,
   args: {
     type: 'search',
-    placeholder: 'search for a monster here'
+    placeholder: 'search for a monster'
   }
 };
 
