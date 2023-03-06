@@ -1,6 +1,6 @@
 <h1 align="center">Monsters Profile</h1>
 
- <p align="center">Monster profile is a site to showcase monster to choose. [Click here and check out the result](https://monsters-profile-one.vercel.app/)</p>
+ <p align="center">Monster profile is a site to showcase monster to choose. </p>
 
 
 <p align="center">
@@ -55,6 +55,7 @@ This is a side project using React which has the purpose to study and to use of 
 
 
 ##  Frontend
+[Click here and check out the result](https://monsters-profile-one.vercel.app/).
 <h1 align="center">
   <img alt="monsters-profile" title="#app-image"  src="/public/monsters-profile.png" />
 </h1>
