@@ -1,9 +1,13 @@
-import React from 'react';
+import { ReactElement } from 'react';
 import CardProfile from '../CardProfile/CardProfile';
+import { Monster } from '../../App';
 import { Box, Grid } from '@chakra-ui/react';
-import PropTypes from 'prop-types';
 
-const CardList = ({ monstersList }) => {
+type CardListProps = {
+  monstersList: Monster[];
+}
+
+const CardList = ({ monstersList }: CardListProps): ReactElement => {
   return (
     <Grid templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }} gap={4}>
       {monstersList.map((monster) => {
@@ -15,10 +19,6 @@ const CardList = ({ monstersList }) => {
       })}
     </Grid>
   );
-};
-
-CardList.prototype = {
-  monstersList: PropTypes.object
 };
 
 export default CardList;

@@ -1,20 +1,30 @@
 import { Box, ChakraProvider, Grid, Heading, VStack } from '@chakra-ui/react';
 import theme from './theme/theme';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, ChangeEvent } from 'react';
+import { getData } from './utils/data.utils'
 import ColorModeSwitcher from './components/ColorModeSwitcher/ColorModeSwitcher';
 import SearchBox from './components/SearchBox/SearchBox';
 import CardList from './components/CardList/CardList';
 import './App.css';
 
+export type Monster = {
+  id: string;
+  name: string;
+  email: string;
+}
+
 const App = () => {
   const [searchField, setSearchField] = useState('');
-  const [monsters, setMonsters] = useState([]);
+  const [monsters, setMonsters] = useState<Monster[]>([]);
   const [filteredMonsters, setFilterMonsters] = useState(monsters);
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then((response) => response.json())
-      .then((users) => setMonsters(users));
+    const fetchUsers = async () => {
+      const users = await getData<Monster[]>('https://jsonplaceholder.typicode.com/users');
+      setMonsters(users);
+    }
+
+    fetchUsers();
   }, []);
 
   useEffect(() => {
@@ -24,13 +34,13 @@ const App = () => {
     setFilterMonsters(newFilteredMonsters);
   }, [monsters, searchField]);
 
-  const onChangeHandler = (event) => {
+  const onChangeHandler = (event: ChangeEvent<HTMLInputElement>): void => {
     const searchFieldInput = event.target.value.toLocaleLowerCase();
     setSearchField(searchFieldInput);
   };
 
   return (
-    <ChakraProvider theme={theme} resetCss={false}>
+    <ChakraProvider theme={theme}>
       <Box textAlign='center'>
         <Grid minH='100vh' p={3}>
           <ColorModeSwitcher justifySelf='flex-end' />
