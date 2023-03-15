@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 import { Box, Input, useColorModeValue } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
-const SearchBox = ({ onChange, placeholder }) => {
+type SearchBoxProps = {
+  placeholder?: string;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+}
+
+const SearchBox = ({ placeholder, onChange }: SearchBoxProps) => {
   let boxBorder = useColorModeValue('gray.50', 'primary400');
 
   return (

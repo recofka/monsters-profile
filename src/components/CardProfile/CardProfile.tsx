@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
+import { Monster } from '../../App';
 import { Flex, Image, Text, useColorModeValue, Stack, Button } from '@chakra-ui/react';
 
-const CardProfile = ({ monster }) => {
+type CardProfileProps = {
+  monster: Monster;
+}
+
+const CardProfile = ({ monster }: CardProfileProps) => {
   const { id, name, email } = monster;
-  const [isHovering, setHovering] = useState('');
+  const [isHovering, setHovering] = useState(Boolean(false));
   let cardBg = useColorModeValue('lightcyan', 'primary300');
   let cardBorder = useColorModeValue('gray.800', 'primary400');
   let contrastColor = useColorModeValue('lightviolet', 'primary100');
@@ -87,7 +92,5 @@ const CardProfile = ({ monster }) => {
     </Flex>
   );
 };
-
-CardProfile.propTypes = {};
 
 export default CardProfile;
