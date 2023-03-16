@@ -1,9 +1,8 @@
-import React from 'react';
 import CardProfile from './CardProfile';
 
 export default {
-  title: 'Components/CardProfile',
   component: CardProfile,
+  title: 'Components/CardProfile',
   args: {
     key: 10,
     monster: {

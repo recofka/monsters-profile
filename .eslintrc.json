@@ -12,9 +12,15 @@
     "plugin:testing-library/react",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "prettier"
+    "prettier",
+    "plugin:@typescript-eslint/recommended"
   ],
-  "plugins": ["prettier"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "plugins": ["prettier", "@typescript-eslint"],
   "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -24,8 +30,16 @@
   "rules": {
     "react/react-in-jsx-scope": "off",
     "prettier/prettier": "warn",
-    "no-unused-vars": "off",
     "react/prop-types": "off",
-    "@typescript-eslint/no-unused-vars": ["error"]
+    "no-undef": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/member-ordering": "error",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/prefer-interface": "off",
+    "no-console": "off",
+    "sort-keys": "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error"
   }
 }

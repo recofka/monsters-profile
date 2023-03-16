@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Monster } from '../../App';
 import { Flex, Image, Text, useColorModeValue, Stack, Button } from '@chakra-ui/react';
 
 type CardProfileProps = {
   monster: Monster;
-}
+};
 
 const CardProfile = ({ monster }: CardProfileProps) => {
   const { id, name, email } = monster;
   const [isHovering, setHovering] = useState(Boolean(false));
-  let cardBg = useColorModeValue('lightcyan', 'primary300');
-  let cardBorder = useColorModeValue('gray.800', 'primary400');
-  let contrastColor = useColorModeValue('lightviolet', 'primary100');
-  let mainText = useColorModeValue('gray.800', 'primary800');
-  let secondaryText = useColorModeValue('gray.800', 'primary600');
+  const cardBg = useColorModeValue('lightcyan', 'primary300');
+  const cardBorder = useColorModeValue('gray.800', 'primary400');
+  const contrastColor = useColorModeValue('lightviolet', 'primary100');
+  const mainText = useColorModeValue('gray.800', 'primary800');
+  const secondaryText = useColorModeValue('gray.800', 'primary600');
 
   const handleMouseEnter = () => {
     setHovering(true);
