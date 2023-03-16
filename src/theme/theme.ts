@@ -1,5 +1,5 @@
 import { extendTheme } from '@chakra-ui/react';
-import { mode } from '@chakra-ui/theme-tools';
+import { mode, StyleFunctionProps } from '@chakra-ui/theme-tools';
 
 const Theme = extendTheme({
   colors: {
@@ -20,7 +20,7 @@ const Theme = extendTheme({
     heading: `'Kanit', sans-serif`
   },
   styles: {
-    global: (props) => ({
+    global: (props: Record<string, any> | StyleFunctionProps) => ({
       body: {
         bg: mode('lightviolet', 'spacecadet')(props)
       }
