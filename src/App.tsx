@@ -1,7 +1,7 @@
 import { Box, ChakraProvider, Grid, Heading, VStack } from '@chakra-ui/react';
 import theme from './theme/theme';
-import React, { useEffect, useState, ChangeEvent } from 'react';
-import { getData } from './utils/data.utils'
+import { useEffect, useState, ChangeEvent } from 'react';
+import { getData } from './utils/data.utils';
 import ColorModeSwitcher from './components/ColorModeSwitcher/ColorModeSwitcher';
 import SearchBox from './components/SearchBox/SearchBox';
 import CardList from './components/CardList/CardList';
@@ -11,7 +11,7 @@ export type Monster = {
   id: string;
   name: string;
   email: string;
-}
+};
 
 const App = () => {
   const [searchField, setSearchField] = useState('');
@@ -22,7 +22,7 @@ const App = () => {
     const fetchUsers = async () => {
       const users = await getData<Monster[]>('https://jsonplaceholder.typicode.com/users');
       setMonsters(users);
-    }
+    };
 
     fetchUsers();
   }, []);
